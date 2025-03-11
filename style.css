@@ -40,6 +40,7 @@ body {
     padding: 10px;
 }
 
+
 .interface2 span{
     color: #ff9900;
 }
@@ -317,53 +318,66 @@ section.sobre .flex {
 }
 
 /* ESTILO DO PORTFÓLIO */
-section.portfolio {
-    padding: 80px 4%;
-    box-shadow: 0 0 40px 10px #ffffff1d;
-}
 
-section.portfolio .flex {
-    justify-content: space-around;
-    margin-top: 60px;
-}
-
-.img-port {
-    width: 360px;
-    height: 460px;
-    background-size: cover;
-    background-position: 100% 0%;
-    transition: 8s;
-    cursor: pointer;
-    border-radius: 40px;
-    position: relative;
-}
-
-.img-port:hover {
-    background-position: 100% 100%;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000000b8;
-    border-radius: 40px;
+/* Estilos padrões para telas grandes */
+.containerf {
+    width: 80%; /* A div principal ocupa 80% da largura */
+    margin: 0 auto; /* Centraliza a div principal horizontalmente */
+    text-align: center; /* Centraliza o título */
+  }
+  
+  .titulof {
+    font-size: 24px; /* Tamanho do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+  }
+  
+  .fotosf {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: 600;
-    color: #fff;
-    opacity: 0;
-    transition: .5s;
-}
-
-.overlay:hover {
-    opacity: 1;
-}
-
+    justify-content: space-between; /* Distribui as divs com espaço entre elas */
+    gap: 20px; /* Adiciona um pequeno espaço entre as imagens */
+  }
+  
+  .fotof {
+    width: 30%; /* Cada div ocupa 30% da largura da div principal */
+    padding: 10px; /* Espaçamento interno das divs */
+  }
+  
+  .fotof img {
+    width: 100%; /* A imagem vai ocupar toda a largura da div */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Bordas arredondadas nas imagens */
+    transition: transform 0.3s; /* Efeito suave no hover */
+  }
+  
+  .fotof a {
+    display: block; /* Faz com que o link ocupe a div inteira */
+    text-decoration: none; /* Remove o sublinhado do link */
+  }
+  
+  .fotof img:hover {
+    transform: scale(1.03); /* Aumenta um pouco a imagem quando passar o mouse */
+  }
+  
+  /* Media Query para telas pequenas (até 768px de largura) */
+  @media (max-width: 768px) {
+    .containerf {
+      width: 90%; /* Aumenta a largura da div principal em telas menores */
+    }
+  
+    .fotosf {
+      flex-direction: column; /* As imagens ficam empilhadas (verticalmente) */
+      align-items: center; /* Centraliza as imagens */
+    }
+  
+    .fotof {
+      width: 80%; /* As divs de fotos ocupam mais largura em telas menores */
+      margin-bottom: 20px; /* Espaço entre as imagens */
+    }
+  
+    .titulof {
+      font-size: 20px; /* Reduz o tamanho do título em telas menores */
+    }
+  }
 /* ESTILO DO FORMULÁRIO DE CONTATO */
 section.formulario {
     padding: 80px 4%;
@@ -537,6 +551,12 @@ footer .line-footer p a {
 
     .topo-do-site .img-topo-site img {
         width: 100%;
+    }
+
+    .txt-topo-site2{
+       width: 100%;
+       padding: 0;
+       margin: 0;
     }
 
     /* ESPECIALIDADES */
